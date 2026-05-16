@@ -1,0 +1,212 @@
+/* Modern Styling for Student Management System */
+
+.root {
+    font-family: "Segoe UI", "Inter", sans-serif;
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+    background-color: #f4f6f8;
+    -fx-background-color: #f4f6f8;
+}
+
+.page-title {
+    -fx-text-fill: #2c3e50;
+    padding: 0 0 20px 0;
+    -fx-padding: 0 0 20 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2c3e50;
+    -fx-background-color: #2c3e50;
+    padding: 20px 0 0 0;
+    -fx-padding: 20 0 0 0;
+}
+
+.sidebar-header {
+    -fx-text-fill: white;
+}
+
+.sidebar-button {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: #bdc3c7;
+    -fx-alignment: center-left;
+    padding: 10px 15px 10px 20px;
+    -fx-padding: 10 15 10 20;
+    font-size: 14px;
+    -fx-font-size: 14px;
+    cursor: pointer;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    background-color: #34495e;
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+}
+
+.btn-danger:hover {
+    background-color: #e74c3c;
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+/* Cards */
+.stat-card {
+    background-color: white;
+    -fx-background-color: white;
+    border-radius: 8px;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    padding: 20px;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+.stat-title {
+    -fx-text-fill: #7f8c8d;
+    font-size: 14px;
+    -fx-font-size: 14px;
+}
+
+.stat-value {
+    -fx-text-fill: #2c3e50;
+    font-size: 24px;
+    -fx-font-size: 24px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    padding: 10px 0 0 0;
+    -fx-padding: 10 0 0 0;
+}
+
+/* Table */
+.table-view {
+    background-color: white;
+    -fx-background-color: white;
+    border-radius: 8px;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    border-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    background-color: #ecf0f1;
+    -fx-background-color: #ecf0f1;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 40;
+    border-width: 0 0 1px 0;
+    -fx-border-width: 0 0 1 0;
+    border-color: #bdc3c7;
+    -fx-border-color: #bdc3c7;
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #2c3e50;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    background-color: #f9f9f9;
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:even {
+    background-color: white;
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+    background-color: #3498db;
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* Forms and Inputs */
+.input-field {
+    -fx-pref-height: 35;
+    background-color: white;
+    -fx-background-color: white;
+    border-color: #bdc3c7;
+    -fx-border-color: #bdc3c7;
+    border-radius: 4px;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    padding: 5px 10px;
+    -fx-padding: 5 10;
+}
+
+.input-field:focused {
+    border-color: #3498db;
+    -fx-border-color: #3498db;
+}
+
+.search-field {
+    -fx-pref-height: 35;
+    background-color: white;
+    -fx-background-color: white;
+    border-color: #bdc3c7;
+    -fx-border-color: #bdc3c7;
+    border-radius: 20px;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    padding: 5px 15px;
+    -fx-padding: 5 15;
+}
+
+/* Buttons */
+.primary-button {
+    background-color: #3498db;
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    -fx-pref-height: 35;
+    border-radius: 4px;
+    -fx-background-radius: 4;
+    cursor: pointer;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    background-color: #2980b9;
+    -fx-background-color: #2980b9;
+}
+
+.secondary-button {
+    background-color: #ecf0f1;
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #2c3e50;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    -fx-pref-height: 35;
+    border-radius: 4px;
+    -fx-background-radius: 4;
+    cursor: pointer;
+    -fx-cursor: hand;
+    border-color: #bdc3c7;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 4;
+}
+
+.secondary-button:hover {
+    background-color: #bdc3c7;
+    -fx-background-color: #bdc3c7;
+}
+
+/* Login Container */
+.login-container {
+    background-color: white;
+    -fx-background-color: white;
+    padding: 40px;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 15, 0, 0, 5);
+}
+
+.header-label {
+    -fx-text-fill: #2c3e50;
+}
