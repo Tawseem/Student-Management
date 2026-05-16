@@ -11,19 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up GraalVM
-        uses: graalvm/setup-graalvm@v1
+      - name: Gluon Build Action
+        uses: gluonhq/gluon-build-action@v1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          version: 'latest'
-          java-version: '21'
-          components: 'native-image'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
-
-      - name: Build Android App using GluonFX
-        run: mvn -Pandroid gluonfx:build
+          gluon-target: android
+          project-type: maven
 
       - name: Upload APK
         uses: actions/upload-artifact@v3
