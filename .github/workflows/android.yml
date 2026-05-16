@@ -9,18 +9,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Gluon Build Action
-        uses: gluonhq/gluon-build-action@v1.1
+      - name: Setup Gluon GraalVM
+        uses: gluonhq/setup-graalvm@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
         with:
-          gluon-target: android
-          project-type: maven
+          java-version: '21'
+          distribution: 'temurin'
+          
+      - name: Build Android APK
+        run: mvn gluonfx:build
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: StudentManagementSystem-Android
           path: target/gluonfx/aarch64-android/gvm/*.apk
